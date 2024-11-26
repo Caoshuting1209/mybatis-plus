@@ -1,9 +1,6 @@
 package com.shuting.mybatis_plus.pojo;
 
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,8 +21,15 @@ public class User {
     private Integer age;
     private String email;
 
+    @Version
+    private Integer version;
+
+    @TableLogic
+    private Integer deleted;
+
     @TableField(fill = FieldFill.INSERT)
     private Date gmtCreate;
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date gmtModified;
+
 }
