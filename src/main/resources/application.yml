@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: mybatis_plus
+
+  datasource:
+    username: shuting
+    password: 123456
+    url: jdbc:mysql://localhost:3306/mybatis_plus?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2b8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+    configuration:
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    mapper-locations: classpath:/mapper/**/*.xml
+    type-aliases-package: com.shuting.mybatis_plus.pojo
+
+
+
