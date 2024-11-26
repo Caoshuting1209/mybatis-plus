@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -23,7 +25,7 @@ public class User {
     private String email;
 
     @TableField(fill = FieldFill.INSERT)
-    private Data gmt_Create;
+    private Date gmtCreate;
     @TableField(fill = FieldFill.INSERT_UPDATE)
-    private Data gmt_Modified;
+    private Date gmtModified;
 }
